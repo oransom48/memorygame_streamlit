@@ -8,9 +8,15 @@ st.set_page_config(
 )
 
 # go to main page
-gohome = st.button(":information_desk_person: Login")
-if gohome:
-    switch_page("main")
+if st.session_state.username == 'guest':
+    login = st.button(":information_desk_person: Log in")
+    if login:
+        switch_page("main")
+else:
+    logout = st.button(":information_desk_person: Log out")
+    if logout:
+        del st.session_state.username
+        switch_page("main")
 
 # main program
 st.write(f"Welcome {st.session_state.username} to Memorism!")
