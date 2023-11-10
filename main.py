@@ -9,7 +9,17 @@ if 'username' not in st.session_state:
 st.set_page_config(
     "Memorist",
     page_icon= "😎",
+    initial_sidebar_state="collapsed",
 )
+
+# hide sidebar
+st.markdown("""
+    <style>
+        section[data-testid="stSidebar"][aria-expanded="true"]{
+            display: none;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 # head
 st.write("welcome to")

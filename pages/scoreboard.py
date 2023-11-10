@@ -4,6 +4,21 @@ import pandas as pd
 
 from streamlit_extras.switch_page_button import switch_page
 
+st.set_page_config(
+    "Memorist",
+    page_icon= "😎",
+    initial_sidebar_state="collapsed",
+)
+
+# hide sidebar
+st.markdown("""
+    <style>
+        section[data-testid="stSidebar"][aria-expanded="true"]{
+            display: none;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
 gohome = st.button(":house: Home")
 if gohome:
     switch_page("mode")
