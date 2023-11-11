@@ -31,10 +31,13 @@ if 'ans' not in st.session_state:
 # question
 listnum = ['0','1','2','3','4','5','6','7','8','9']
 listchar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
+listmix = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
 
 listchoice = []
 if st.session_state.mode == 'Character':
     listchoice = listchar
+elif st.session_state.mode == 'Mix it all':
+    listchoice = listmix
 else:
     listchoice = listnum
 

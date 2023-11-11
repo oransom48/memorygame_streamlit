@@ -35,7 +35,7 @@ st.title("Game Mode")
 # select game mode
 mode = st.selectbox(
     "Please choose :rainbow[game mode]",
-    ('Number', 'Character'),
+    ('Number', 'Character', 'Mix it all'),
     index=None,
     placeholder="Game mode",
 )
