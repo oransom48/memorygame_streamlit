@@ -64,6 +64,11 @@ with st.form("signup"):
                     (?,?);
             """, (username,password))
 
+            cur.execute("""
+                INSERT INTO score VALUES
+                    (?,?,?,?);
+            """, (username, 0, 0, 0))
+
             con.commit()
 
             st.session_state.username = username
