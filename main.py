@@ -7,7 +7,7 @@ if 'username' not in st.session_state:
     st.session_state.username = "guest"
 
 st.set_page_config(
-    "Memorist",
+    "Memorism",
     page_icon= "😎",
     initial_sidebar_state="collapsed",
 )

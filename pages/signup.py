@@ -4,7 +4,7 @@ import sqlite3
 from streamlit_extras.switch_page_button import switch_page 
 
 st.set_page_config(
-    "Memorist",
+    "Memorism",
     page_icon= "😎",
     initial_sidebar_state="collapsed",
 )
