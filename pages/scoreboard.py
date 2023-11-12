@@ -28,7 +28,7 @@ if gohome:
     switch_page("mode")
 
 mode = st.selectbox(
-    "Please choose :rainbow[game mode]",
+    "game mode",
     ('Number', 'Character', 'Mix it all'),
 )
 
@@ -43,8 +43,13 @@ if mode == 'Number':
         ORDER BY int, username;
     """, con)
     scoreboard = pd.DataFrame(sql_query, columns = ['username', 'int'])
+    scoreboard.rename(columns={'int':'highest score'}, inplace = True)
     st.subheader("Number mode")
-    st.dataframe(scoreboard)
+    st.dataframe(
+        scoreboard, 
+        hide_index = True, 
+        use_container_width = True
+    )
 
 elif mode == 'Character':
     sql_query = pd.read_sql_query("""
@@ -53,8 +58,13 @@ elif mode == 'Character':
         ORDER BY char, username;
     """, con)
     scoreboard = pd.DataFrame(sql_query, columns = ['username', 'char'])
+    scoreboard.rename(columns={'char':'highest score'}, inplace = True)
     st.subheader("Character mode")
-    st.dataframe(scoreboard)
+    st.dataframe(
+        scoreboard, 
+        hide_index = True, 
+        use_container_width = True
+    )
 
 elif mode == 'Mix it all':
     sql_query = pd.read_sql_query("""
@@ -63,9 +73,14 @@ elif mode == 'Mix it all':
         ORDER BY mix, username;
     """, con)
     scoreboard = pd.DataFrame(sql_query, columns = ['username', 'mix'])
+    scoreboard.rename(columns={'mix':'highest score'}, inplace = True)
     st.subheader("Mix it all mode")
-    st.dataframe(scoreboard)
+    st.dataframe(
+        scoreboard, 
+        hide_index = True, 
+        use_container_width = True
+    )
 
-    con.commit()
+con.commit()
 
 # st.session_state
