@@ -17,6 +17,10 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+#link style
+with open("stylized.css") as style:
+    st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
+
 goback = st.button(":arrow_backward: Go back")
 if goback:
     switch_page("main")

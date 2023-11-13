@@ -21,18 +21,20 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+#link style
+with open("stylized.css") as style:
+    st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
+
 # head
 st.write("welcome to")
 st.title("Memorism")
-st.markdown(
-    "How long can you :rainbow[remember]?!"
-)
+st.markdown("How long can you remember?!")
 
 col1, col2 = st.columns(2)
 
 with col1:
     # log in
-    login = st.button("Log In", use_container_width = True)
+    login = st.button("Log in", use_container_width = True)
     if login:
         switch_page("login")
 
