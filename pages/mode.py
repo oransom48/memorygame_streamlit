@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
-    "Memorist",
+    "Memorism",
     page_icon= "😎",
     initial_sidebar_state="collapsed",
 )
@@ -40,7 +40,7 @@ st.title("Game Mode")
 # select game mode
 mode = st.selectbox(
     "Please choose :rainbow[game mode]",
-    ('Number', 'Character'),
+    ('Number', 'Character', 'Mix it all'),
     index=None,
     placeholder="Game mode",
 )

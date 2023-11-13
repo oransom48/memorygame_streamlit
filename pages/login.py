@@ -1,9 +1,10 @@
 import streamlit as st
+import sqlite3
 
 from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
-    "Memorist",
+    "Memorism",
     page_icon= "😎",
     initial_sidebar_state="collapsed",
 )
@@ -20,6 +21,9 @@ st.markdown("""
 #link style
 with open("stylized.css") as style:
     st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
+# database config
+con = sqlite3.connect('userdb.db')
+cur = con.cursor()
 
 goback = st.button(":arrow_backward: Go back")
 if goback:
@@ -41,16 +45,15 @@ with st.form("login"):
 
     if login_submitted:
 
-        # open user.txt file to check whether this username is valid and paaword is correct
-        with open("user.txt", 'r') as file:
-            for i in file:
-                u, p, a, b = i.strip().split(',')
-
-                if u == username and p != password:
-                    st.error("Incorrect password. Please try again.")
-                elif u == username and p == password:
-                    st.session_state.username = u
-                    switch_page("mode")
-
+        res = cur.execute("SELECT * FROM userdb WHERE username=?", (username,))
+        temp = res.fetchone()
+        if temp is None:
             st.error("Invalid user. Please try again.")
+        else:
+            u, p = temp
+            if u == username and p != password:
+                st.error("Incorrect password. Please try again.")
+            elif u == username and p == password:
+                st.session_state.username = username
+                switch_page("mode")
                 

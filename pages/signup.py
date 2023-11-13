@@ -1,9 +1,10 @@
 import streamlit as st
+import sqlite3
 
 from streamlit_extras.switch_page_button import switch_page 
 
 st.set_page_config(
-    "Memorist",
+    "Memorism",
     page_icon= "😎",
     initial_sidebar_state="collapsed",
 )
@@ -16,6 +17,10 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
+
+# database config
+con = sqlite3.connect('userdb.db')
+cur = con.cursor()
 
 goback = st.button(":arrow_backward: Go back")
 if goback:
@@ -35,12 +40,10 @@ with st.form("signup"):
 
         # 1. check if this user is already exist
         alreadyexist = False
-        with open("user.txt", 'r') as file:
-            for i in file:
-                u, p, a, b = i.strip().split(',')
-                if u == username:
-                    alreadyexist = True
-                    break
+
+        res = cur.execute("SELECT * FROM userdb WHERE username=?", (username,))
+        if res.fetchone() is not None:
+            alreadyexist = True
 
         if alreadyexist:
             st.error('This username already exists. Please try again.')
@@ -55,7 +58,18 @@ with st.form("signup"):
 
         # if all pass
         else:
-            with open("user.txt", 'a') as file:
-                file.write(f"{st.session_state.username},{st.session_state.password},0,0\n")
-                st.success('Register successful')
-            switch_page("main")
+            # add user to database
+            cur.execute("""
+                INSERT INTO userdb VALUES
+                    (?,?);
+            """, (username,password))
+
+            cur.execute("""
+                INSERT INTO score VALUES
+                    (?,?,?,?);
+            """, (username, 0, 0, 0))
+
+            con.commit()
+
+            st.session_state.username = username
+            st.success('Register successful and logged in automatically')
