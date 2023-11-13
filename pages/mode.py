@@ -17,6 +17,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+
 # go to main page
 if st.session_state.username == 'guest':
     login = st.button(":information_desk_person: Log in")
@@ -27,6 +28,10 @@ else:
     if logout:
         del st.session_state.username
         switch_page("main")
+
+# #link style
+# with open("stylized.css") as style:
+#     st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
 
 # main program
 st.write(f"Welcome {st.session_state.username} to Memorism!")

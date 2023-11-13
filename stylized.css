@@ -1,0 +1,38 @@
+* {
+    font-family: Satoshi;
+}
+/* all small Texts */
+p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-purple, #B15EFF);
+    display: table;
+    margin: 0 auto;
+}
+/* head */
+span.st-emotion-cache-10trblm.e1nzilvr1{
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--main-purple, #3D30A2);
+    text-align: center;
+}
+/* button */
+div.row-widget.stButton {
+    padding : 1.5rem 3.5rem;
+}
+button.st-emotion-cache-1umgz6k.ef3psqc11 {
+    border-radius: 0.9375rem;
+    background: var(--accent-2, #F7F370);
+    
+}
+
+/* sign-up button */
+div.row-widget.stButton {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+button.st-emotion-cache-7ym5gk.ef3psqc11 {
+    border-radius: 0.9375rem;
+    border: 3px solid var(--secondary-purple,#B15EFF);
+}

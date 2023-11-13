@@ -18,6 +18,9 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+#link style
+with open("stylized.css") as style:
+    st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
 # database config
 con = sqlite3.connect('userdb.db')
 cur = con.cursor()
