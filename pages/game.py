@@ -52,9 +52,12 @@ def checkstate():
         switch_page("gameover")
 
 # go to main page
-gohome = st.button(":house: Home")
-if gohome:
-    switch_page("main")
+restart = st.button(":repeat: Restart")
+if restart:
+    del st.session_state.ans
+    del st.session_state.keylist
+    del st.session_state.score
+    switch_page("mode")
 
 st.title('Game start!')
 st.write("enter '0' to start game (and get 1 point for :rainbow[free] :smile:)")
