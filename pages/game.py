@@ -78,6 +78,5 @@ with col2:
             st.header(f"digit {i+1}: :red[{question[i]}]")
             time.sleep(1)
         st.write("Time to answer!")
-    
 # temp
 # st.write(st.session_state)

@@ -1,6 +1,10 @@
 * {
     font-family: Satoshi;
 }
+/* whole page */
+div.block-container.st-emotion-cache-1y4p8pa.ea3mdgi4 {
+    padding: 6rem 1rem 8rem;
+}
 /* all small Texts */
 p{
     font-size: 1.2rem;

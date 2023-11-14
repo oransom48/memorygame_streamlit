@@ -1,0 +1,7 @@
+How to play
+1. Choose game mode and click start
+2. press '0' to start the game
+3. Text will be shown and you need to remember them
+4. Input your answer in the answer box
+5. Click submit to answer. if you want the text to be shown again press 'Enter'
+6. Keep looking the digit carefully because it can confuse you

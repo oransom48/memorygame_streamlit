@@ -45,7 +45,6 @@ with col2:
         st.session_state.username = "guest"
         switch_page("mode")
 
-st.divider()
 
 st.write("Don't have account?")
 # sign up
