@@ -40,7 +40,7 @@ if mode == 'Number':
     sql_query = pd.read_sql_query("""
         SELECT username, int FROM score
         WHERE NOT int = 0
-        ORDER BY int, username;
+        ORDER BY int DESC;
     """, con)
     scoreboard = pd.DataFrame(sql_query, columns = ['username', 'int'])
     scoreboard.rename(columns={'int':'highest score'}, inplace = True)
@@ -55,7 +55,7 @@ elif mode == 'Character':
     sql_query = pd.read_sql_query("""
         SELECT username, char FROM score
         WHERE NOT char = 0
-        ORDER BY char, username;
+        ORDER BY char DESC;
     """, con)
     scoreboard = pd.DataFrame(sql_query, columns = ['username', 'char'])
     scoreboard.rename(columns={'char':'highest score'}, inplace = True)
@@ -70,7 +70,7 @@ elif mode == 'Mix it all':
     sql_query = pd.read_sql_query("""
         SELECT username, mix FROM score
         WHERE NOT mix = 0
-        ORDER BY mix, username;
+        ORDER BY mix DESC;
     """, con)
     scoreboard = pd.DataFrame(sql_query, columns = ['username', 'mix'])
     scoreboard.rename(columns={'mix':'highest score'}, inplace = True)
