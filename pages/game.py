@@ -78,7 +78,7 @@ with col2:
     with st.empty():
         for i in range(len(question)):
             # st.write(f"digit {i+1}")
-            st.header(f"digit {i+1}: :red[{question[i]}]")
+            st.subheader(f"digit {i+1}: :red[{question[i]}]")
             time.sleep(1)
         st.write("Time to answer!")
     
