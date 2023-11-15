@@ -29,9 +29,7 @@ else:
         del st.session_state.username
         switch_page("main")
 
-# #link style
-# with open("stylized.css") as style:
-#     st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
+
 
 # main program
 st.write(f"Welcome {st.session_state.username} to Memorism!")
@@ -46,6 +44,11 @@ mode = st.selectbox(
 )
 
 start = st.button("Start")
+
+#playing manual
+expander = st.expander("How to play")
+with open("manual.txt") as script:
+    expander.write(script.read())
 
 # session_state: mode
 if 'mode' not in st.session_state:
