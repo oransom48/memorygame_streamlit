@@ -45,6 +45,15 @@ else:
 st.write(f"Welcome {st.session_state.username} to Memorism!")
 st.title("Game Mode")
 
+#playing manual
+expander = st.expander("How to play")
+expander.write("""1. Choose game mode and click start
+2. press '0' to start the game
+3. Text will be shown and you need to remember them
+4. Input your answer in the answer box
+5. Click submit to answer. if you want the text to be shown again press 'Enter'
+6. Look at the digit carefully. It's gonna confuse you.""")
+
 # select game mode
 mode = st.selectbox(
     "Please choose :rainbow[game mode]",
