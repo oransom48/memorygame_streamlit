@@ -1,3 +1,7 @@
+h1{
+    padding: 0rem 0rem 0rem 0rem;
+}
+
 div.st-emotion-cache-5rimss.e1nzilvr5{
     color: #B15EFF;
     font-family: 'Silkscreen', sans-serif;
@@ -43,4 +47,9 @@ button.st-emotion-cache-7ym5gk.ef3psqc12{
 div.st-emotion-cache-1vbkxwb.e1nzilvr5{
     font-family: 'Prompt', sans-serif;
     font-size: 16px;
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 5px;
 }

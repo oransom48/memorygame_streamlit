@@ -1,5 +1,7 @@
 p{
     font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 li{
@@ -7,6 +9,10 @@ li{
     font-size: 14px;
     text-align: left;
     color: #FFA33C;
+}
+
+h1{
+    padding: 1rem 0rem 1rem;
 }
 
 button.st-emotion-cache-7ym5gk.ef3psqc12{
@@ -42,7 +48,7 @@ div.st-emotion-cache-5rimss.e1nzilvr5{
 }
 
 div.st-emotion-cache-1629p8f.e1nzilvr2{
-    padding: 1rem 0px 1rem;
+    padding: 0rem 0px 0rem 0rem;
 }
 
 div.st-emotion-cache-1vbkxwb.e1nzilvr5{
