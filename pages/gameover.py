@@ -77,8 +77,8 @@ with col1:
         switch_page("scoreboard")
 
 with col2:
-    home = st.button("Home", use_container_width = True)
-    if home:
+    restart = st.button("Restart", use_container_width = True)
+    if restart:
         del st.session_state.ans
         del st.session_state.keylist
         del st.session_state.score

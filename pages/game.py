@@ -74,23 +74,23 @@ st.write("enter '0' to start game (and get 1 point for :rainbow[free] :smile:)")
 
 col1, col2 = st.columns(2)
 
-with col1:
+with col2: 
     answer = st.text_input("answer")
     st.session_state.ans = answer
     submit = st.button("Submit")
     if submit:
         del answer
         checkstate()
-        st.write(f"Your score: { st.session_state.score }")
 
-with col2:
+with col1:
     question = st.session_state.keylist    
     with st.empty():
         for i in range(len(question)):
-            # st.write(f"digit {i+1}")
-            st.header(f"digit {i+1}: :red[{question[i]}]")
+            st.subheader(f"digit {i+1}: :red[{question[i]}]")
             time.sleep(1)
         st.write("Time to answer!")
+
+st.write(f"Your score: { st.session_state.score }")
     
 # temp
 # st.write(st.session_state)
