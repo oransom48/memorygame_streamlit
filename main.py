@@ -46,6 +46,7 @@ with col2:
         switch_page("mode")
 
 
+
 st.write("Don't have account?")
 # sign up
 signup = st.button("Sign Up Here!")

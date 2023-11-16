@@ -30,8 +30,8 @@ if goback:
 st.title("Sign up")
 
 with st.form("signup"):
-    username = st.text_input("username", key='username')
-    password = st.text_input("password", type='password', key='password')
+    username = st.text_input("username")
+    password = st.text_input("password", type='password')
     confirm_password = st.text_input("confirm password", type='password')
     
     signup_submitted = st.form_submit_button("Register")
@@ -72,4 +72,4 @@ with st.form("signup"):
             con.commit()
 
             st.session_state.username = username
-            st.success('Register successful and logged in automatically')
+            switch_page("mode")

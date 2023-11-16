@@ -81,5 +81,11 @@ with col2:
             st.header(f"digit {i+1}: :red[{question[i]}]")
             time.sleep(1)
         st.write("Time to answer!")
+
+#playing manual
+expander = st.expander("How to play")
+with open("manual.txt") as script:
+    expander.write(script.read())
+    
 # temp
 # st.write(st.session_state)
