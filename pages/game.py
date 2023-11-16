@@ -75,19 +75,15 @@ with col2:
     if submit:
         del answer
         question.check()
+    st.write(f"Your score: { st.session_state.score }")
 
 with col1:
-    # question = st.session_state.keylist    
-    # with st.empty():
-    #     for i in range(len(question)):
-    #         st.subheader(f"digit {i+1}: :red[{question[i]}]")
-    #         time.sleep(1)
-    #     st.write("Time to answer!")
-    question = st.session_state.keylist
-    st.subheader(f"{question}")
-
-
-st.write(f"Your score: { st.session_state.score }")
+    question = st.session_state.keylist    
+    with st.empty():
+        for i in range(len(question)):
+            st.subheader(f"digit {i+1}: :red[{question[i]}]")
+            time.sleep(1)
+        st.write("Time to answer!")
     
 # temp
 # st.write(st.session_state)
