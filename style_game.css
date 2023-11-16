@@ -1,39 +1,48 @@
 span.st-emotion-cache-10trblm.e1nzilvr1{
     color: #3D30A2;
-    font-family: Satoshi;
-    font-size: 100px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 45px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     text-align: center;
 }
 
 div.st-emotion-cache-16idsys.e1nzilvr5{
     color: #B15EFF;
-    font-family: Satoshi;
-    font-size: 40px;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     text-align: center;   
 }
 
 div.st-emotion-cache-5rimss.e1nzilvr5{
     color: #B15EFF;
-    font-family: Satoshi;
-    font-size: 40px;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     text-align: center;
 }
 
-input.st-bg.st-cb.st-e5.st-e6.st-e7.st-e8.st-cc.st-ce.st-cd.st-cf.st-cg.st-b9.st-e9.st-ca.st-bj.st-ea.st-c5.st-c6.st-c7.st-c8.st-ae.st-af.st-ag.st-bf.st-ai.st-aj.st-bu.st-eb.st-ec.st-ed{
-    background-color: #F7F370;
-}
-
 button.st-emotion-cache-7ym5gk.ef3psqc12{
     color: #FAFAFA;
-    border-radius: 15px;
     background: #3D30A2;
+    border-radius: 15px;
+}
+
+div.st-emotion-cache-1vbkxwb.e1nzilvr5{
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+}
+
+input.st-bg.st-cb.st-d9.st-da.st-db.st-dc.st-cc.st-ce.st-cd.st-cf.st-cg.st-b9.st-dd.st-ca.st-bj.st-de.st-c5.st-c6.st-c7.st-c8.st-ae.st-af.st-ag.st-bf.st-ai.st-aj.st-bu.st-df.st-dg.st-dh{
+    background-color: #F7F370;
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+}
+
+span.st-emotion-cache-10trblm.e1nzilvr1.h3{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
 }

@@ -1,19 +1,17 @@
 div.st-emotion-cache-zt5igj.e1nzilvr4{
     color: #3D30A2;
-    font-family: Satoshi;
+    font-family: 'Prompt', sans-serif;
     font-size: 100px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     text-align: center;
 }
 
 button.st-emotion-cache-1umgz6k.ef3psqc12{
     color: #3D30A2;
-    font-family: Satoshi;
-    font-size: 45px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     text-align: center;
     border:3px solid;
@@ -25,10 +23,14 @@ button.st-emotion-cache-1umgz6k.ef3psqc12{
 
 div.st-emotion-cache-5rimss.e1nzilvr5{
     color: #FFA33C;
-    font-family: Satoshi;
-    font-size: 70px;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     text-align: center;
+}
+
+div.st-emotion-cache-1vbkxwb.e1nzilvr5{
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
 }
