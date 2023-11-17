@@ -20,6 +20,17 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+with open("static/style_game.css") as f:
+     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+st.markdown("""<link rel="stylesheet" 
+            href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">"""
+            , unsafe_allow_html=True)
+
+st.markdown("""<link rel="stylesheet" 
+            href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">"""
+            , unsafe_allow_html=True)
+
 # session_state: score, keylist, ans
 if 'score' not in st.session_state:
     st.session_state.score = 0
@@ -61,7 +72,14 @@ if restart:
     del st.session_state.score
     switch_page("mode")
 
-st.title('Game start!')
+st.write("""<h style= 
+         "font-size: xxx-large;
+         font-family:'Prompt', sans-serif;
+         color: #3D30A2;
+         font-style: normal;
+         font-weight: 700;"
+         >Game start!</h>""",unsafe_allow_html=True)
+
 st.write("enter '0' to start game (and get 1 point for :rainbow[free] :smile:)")
 
 question = sequence()
@@ -78,10 +96,10 @@ with col2:
     st.write(f"Your score: { st.session_state.score }")
 
 with col1:
-    question = st.session_state.keylist    
+    qshow = st.session_state.keylist 
     with st.empty():
-        for i in range(len(question)):
-            st.subheader(f"digit {i+1}: :red[{question[i]}]")
+        for i in range(len(qshow)):
+            st.subheader(f"digit {i+1}: :red[{qshow[i]}]")
             time.sleep(1)
         st.write("Time to answer!")
     
