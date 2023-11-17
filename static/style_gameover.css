@@ -1,42 +1,19 @@
-h1{
-    padding: 0rem 0rem 0rem 0rem;
-}
-
-div.st-emotion-cache-5rimss.e1nzilvr5{
-    color: #B15EFF;
-    font-family: 'Silkscreen', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    line-height: normal;
-    text-align: center;
-    margin: auto;
-}
-
-span.st-emotion-cache-10trblm.e1nzilvr1{
+div.st-emotion-cache-zt5igj.e1nzilvr4{
     color: #3D30A2;
     font-family: 'Prompt', sans-serif;
+    font-size: xxx-large;
     font-style: normal;
-    font-size: 130px;
     line-height: normal;
     text-align: center;
 }
 
 button.st-emotion-cache-1umgz6k.ef3psqc12{
-    border: 3px solid;
-    border-color: #3D30A2;
-    border-radius: 15px;
-}
-
-div.element-container.st-emotion-cache-np8dwx.e1f1d6gn3{
     color: #3D30A2;
     font-family: 'Prompt', sans-serif;
     font-size: 16px;
     font-style: normal;
     line-height: normal;
     text-align: center;
-}
-
-button.st-emotion-cache-7ym5gk.ef3psqc12{
     border:3px solid;
     border-color: #3D30A2;
     border-radius: 15px;
@@ -44,12 +21,20 @@ button.st-emotion-cache-7ym5gk.ef3psqc12{
     margin: auto;
 }
 
+div.st-emotion-cache-5rimss.e1nzilvr5{
+    color: #FFA33C;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+}
+
 div.st-emotion-cache-1vbkxwb.e1nzilvr5{
     font-family: 'Prompt', sans-serif;
     font-size: 16px;
 }
 
-p{
-    margin-top: 0px;
-    margin-bottom: 5px;
+h1{
+    padding: 0rem 0px 0rem;
 }

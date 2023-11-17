@@ -26,7 +26,7 @@ goback = st.button(":arrow_backward: Go back")
 if goback:
     switch_page("main")
 
-with open("style_login.css") as f:
+with open("static/style_login.css") as f:
      st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.markdown("""<link rel="stylesheet" 

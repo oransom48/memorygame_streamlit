@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-with open("style_main.css") as f:
+with open("static/style_main.css") as f:
      st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.markdown("""<link rel="stylesheet" 

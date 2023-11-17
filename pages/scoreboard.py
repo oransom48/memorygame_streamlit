@@ -32,7 +32,7 @@ mode = st.selectbox(
     ('Number', 'Character', 'Mix it all'),
 )
 
-with open("style_scoreboard.css") as f:
+with open("static/style_scoreboard.css") as f:
      st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.markdown("""<link rel="stylesheet" 

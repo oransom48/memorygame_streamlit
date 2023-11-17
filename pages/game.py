@@ -20,7 +20,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-with open("style_game.css") as f:
+with open("static/style_game.css") as f:
      st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.markdown("""<link rel="stylesheet" 
@@ -73,7 +73,7 @@ if restart:
     switch_page("mode")
 
 st.write("""<h style= 
-         "font-size: 100px;
+         "font-size: xxx-large;
          font-family:'Prompt', sans-serif;
          color: #3D30A2;
          font-style: normal;
@@ -96,10 +96,10 @@ with col2:
     st.write(f"Your score: { st.session_state.score }")
 
 with col1:
-    question = st.session_state.keylist    
+    qshow = st.session_state.keylist 
     with st.empty():
-        for i in range(len(question)):
-            st.subheader(f"digit {i+1}: :red[{question[i]}]")
+        for i in range(len(qshow)):
+            st.subheader(f"digit {i+1}: :red[{qshow[i]}]")
             time.sleep(1)
         st.write("Time to answer!")
     

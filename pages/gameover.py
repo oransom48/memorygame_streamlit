@@ -22,7 +22,7 @@ st.markdown("""
 con = sqlite3.connect('userdb.db')
 cur = con.cursor()
 
-with open("style_gameover.css") as f:
+with open("static/style_gameover.css") as f:
      st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.markdown("""<link rel="stylesheet" 

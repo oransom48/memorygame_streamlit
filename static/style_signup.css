@@ -6,19 +6,23 @@ h1{
     padding: 0rem 0px 1rem;
 }
 
-span.st-emotion-cache-10trblm.e1nzilvr1{
-    color: #3D30A2;
-    font-family: 'Prompt', sans-serif;
-    font-size: 100px;
-    font-style: normal;
-    line-height: normal;
-    text-align: center;
+div.block-container.st-emotion-cache-1y4p8pa.ea3mdgi4{
+    padding: 3rem 1rem 2rem 1rem;
 }
 
 button.st-emotion-cache-7ym5gk.ef3psqc12{
     color: #FFA33C;
     background-color: #F7F370;
     border-radius: 15px;
+}
+
+span.st-emotion-cache-10trblm.e1nzilvr1{
+    color: #3D30A2;
+    font-family: 'Prompt', sans-serif;
+    font-size: xxx-large;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
 }
 
 div.st-emotion-cache-r421ms.e10yg2by1{
@@ -39,9 +43,9 @@ div.st-emotion-cache-16idsys.e1nzilvr5{
 button.st-emotion-cache-7ym5gk.ef3psqc7{
     color: #FFA33C;
     background-color: #F7F370;
-    border-radius: 15px;
     display: block;
     margin: auto;
+    border-radius: 15px;
 }
 
 div.st-emotion-cache-1vbkxwb.e1nzilvr5{
