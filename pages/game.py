@@ -40,27 +40,29 @@ if 'ans' not in st.session_state:
     st.session_state.ans = ''
 
 class sequence:
-    def __init__(self):
-        # question
-        self.listnum = ['0','1','2','3','4','5','6','7','8','9']
-        self.listchar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
-        self.listmix = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
+    def __init__(self, mode):
+        self.mode = mode
 
-    def choice(self):
-        if st.session_state.mode == 'Character':
-            return self.listchar
-        elif st.session_state.mode == 'Mix it all':
-            return self.listmix
+    def mode_tolist(self):
+        if self.mode == 'Number':
+            return ['0','1','2','3','4','5','6','7','8','9']
+        elif self.mode == 'Character':
+            return ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
+        elif self.mode == 'Mix it all':
+            return ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
         else:
-            return self.listnum
+            switch_page("mode")
 
-    def check(self):
-        if st.session_state.ans == st.session_state.keylist:
+    def generate(self):
+        newsequence = ''
+        for i in range(st.session_state.score + 1):
+            newsequence += random.choice(self.mode_tolist())
+        return newsequence
+
+    def checkanswer(self, question, answer):
+        if question == answer:
             st.session_state.score += 1
-            st.session_state.keylist = ''
-            for i in range(st.session_state.score + 1):
-                new = random.choice(self.choice())
-                st.session_state.keylist += new
+            st.session_state.keylist = self.generate()
         else:
             switch_page("gameover")
 
@@ -82,7 +84,7 @@ st.write("""<h style=
 
 st.write("enter '0' to start game (and get 1 point for :rainbow[free] :smile:)")
 
-question = sequence()
+question = sequence(st.session_state.mode)
 
 col1, col2 = st.columns(2)
 
@@ -92,7 +94,7 @@ with col2:
     submit = st.button("Submit")
     if submit:
         del answer
-        question.check()
+        question.checkanswer(st.session_state.keylist, st.session_state.ans)
     st.write(f"Your score: { st.session_state.score }")
 
 with col1:

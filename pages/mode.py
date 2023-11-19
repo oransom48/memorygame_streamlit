@@ -70,7 +70,10 @@ if 'mode' not in st.session_state:
 
 # go to game page
 if start:
-    st.session_state.mode = mode
-    switch_page("game")
+    if mode == None:
+        st.error("Please choose mode")
+    else:
+        st.session_state.mode = mode
+        switch_page("game")
 
 # st.session_state
