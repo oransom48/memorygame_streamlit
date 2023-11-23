@@ -6,31 +6,34 @@ from streamlit_extras.switch_page_button import switch_page
 if 'username' not in st.session_state:
     st.session_state.username = "guest"
 
-st.set_page_config(
-    "Memorism",
-    page_icon= "😎",
-    initial_sidebar_state="collapsed",
-)
+def initial():
+    st.set_page_config(
+        "Memorism",
+        page_icon= "😎",
+        initial_sidebar_state="collapsed",
+    )
 
-with open("static/style_main.css") as f:
-     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    # hide sidebar
+    st.markdown("""
+        <style>
+            section[data-testid="stSidebar"][aria-expanded="true"]{
+                display: none;
+            }
+        </style>
+        """, unsafe_allow_html=True)
 
-st.markdown("""<link rel="stylesheet" 
-            href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">"""
-            , unsafe_allow_html=True)
+    with open("static/style_main.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.markdown("""<link rel="stylesheet" 
-            href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">"""
-            , unsafe_allow_html=True)
+    st.markdown("""<link rel="stylesheet" 
+                href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">"""
+                , unsafe_allow_html=True)
 
-# hide sidebar
-st.markdown("""
-    <style>
-        section[data-testid="stSidebar"][aria-expanded="true"]{
-            display: none;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+    st.markdown("""<link rel="stylesheet" 
+                href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">"""
+                , unsafe_allow_html=True)
+
+initial()
 
 # head
 st.write("welcome to")
